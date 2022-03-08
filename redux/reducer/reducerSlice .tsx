@@ -16,6 +16,7 @@ import {
    reducers: {
      authentication : (state, {payload} : PayloadAction<UserState | any>) => {
       state.userAuth = payload;
+      
      }
     },
   });

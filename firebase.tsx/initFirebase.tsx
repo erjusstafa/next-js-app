@@ -17,7 +17,6 @@ const clientCredentials = {
 };
 
 export default function initFirebase() {
-  console.log("rjrij");
   
  /*  if (firebase.apps.length) firebase.initializeApp(clientCredentials);
   if (typeof window !== undefined) {
@@ -26,7 +25,7 @@ export default function initFirebase() {
       firebase.performance();
     }
   }
-  console.log("Firebase has been init successfully"); */
+ */
 }
 
 // Initialize Firebase

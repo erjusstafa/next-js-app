@@ -1,15 +1,28 @@
 import {
     Action,
     configureStore,
+    getDefaultMiddleware,
     ThunkAction,
   } from '@reduxjs/toolkit';
-  import homeReducer from './reducer/reducerSlice ';
+  import { persistStore, persistReducer } from 'redux-persist'
+  import storage from 'redux-persist/lib/storage' // defaults to localStorage for web
+  import storageSession from "redux-persist/lib/storage/session";
+import rootReducer from './reducerSlice';
 
+  export const persistConfig = {
+    key: "root",
+    storage: storageSession,
+    whitelist: ["home"],
+  };
+  
+  const persistedReducer = persistReducer(persistConfig, rootReducer);
+
+  
   export const store = configureStore({
-    reducer: {
-      home: homeReducer,
-
-     },
+    reducer: persistedReducer,
+    middleware: getDefaultMiddleware({
+      serializableCheck: false,
+    }),
   });
   
   export type AppDispatch = typeof store.dispatch;
