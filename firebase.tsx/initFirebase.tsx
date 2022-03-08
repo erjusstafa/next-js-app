@@ -1,4 +1,5 @@
 import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
 import "firebase/auth";
 import "firebase/firestore";
 import "firebase/storage";
@@ -16,20 +17,22 @@ const clientCredentials = {
 };
 
 export default function initFirebase() {
-  if (firebase.apps.length) firebase.initializeApp(clientCredentials);
+  console.log("rjrij");
+  
+ /*  if (firebase.apps.length) firebase.initializeApp(clientCredentials);
   if (typeof window !== undefined) {
     if ("measurementId" in clientCredentials) {
       firebase.analytics();
       firebase.performance();
     }
   }
-  console.log("Firebase has been init successfully");
+  console.log("Firebase has been init successfully"); */
 }
 
 // Initialize Firebase
 const app = initializeApp(clientCredentials);
 const db = getFirestore(app);
 
-const realDB = getDatabase(app);
-
-export { initFirebase, db, realDB };
+/* const realDB = getDatabase(app);
+ */
+export { initFirebase, db };
