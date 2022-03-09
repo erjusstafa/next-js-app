@@ -1,11 +1,12 @@
 import { NextPage } from "next";
 import React from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
-import { firebaseApp } from "firebase.tsx/initFirebase";
 import { async } from "@firebase/util";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../styles/LoginStyle.module.css";
+import { firebaseApp } from "../firebase/initFirebase";
+
 const Login: NextPage = () => {
   const firebseAuth = getAuth(firebaseApp);
   const provider = new GoogleAuthProvider();
@@ -19,7 +20,7 @@ const Login: NextPage = () => {
     localStorage.setItem("accessToken", JSON.stringify(refreshToken));
     router.push("/");
   };
-  
+
   return (
     <div className={`${styles.loginContent} login--content content w-full`}>
       <div
