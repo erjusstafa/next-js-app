@@ -37,6 +37,10 @@ a {
   top: 50px;
 }
 
+.login--content {
+  min-height: calc(100vh - 200px);
+  overflow: hidden;
+}
 .container--component--one {
   min-height: calc(100vh - 200px);
   overflow: hidden;

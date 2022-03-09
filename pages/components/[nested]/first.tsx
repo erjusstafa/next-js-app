@@ -4,6 +4,7 @@ import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import { NextPage } from "next";
 import { useAppSelector } from "redux/hooks";
+import { useRouter } from "next/router";
 
 const ComponentNestedOne: NextPage = () =>{
   return (
