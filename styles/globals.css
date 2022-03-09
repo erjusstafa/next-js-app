@@ -22,29 +22,6 @@ a {
   box-sizing: border-box;
 }
 
-.nav--bar--wrapper,
-.footer--wrapper {
-  height: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.container--component--two {
-  min-height: calc(100vh - 200px);
-  overflow: hidden;
-  position: relative;
-  top: 50px;
-}
-
-.login--content {
-  min-height: calc(100vh - 200px);
-  overflow: hidden;
-}
-.container--component--one {
-  min-height: calc(100vh - 200px);
-  overflow: hidden;
-}
 ::-webkit-scrollbar {
   background-color: #c0bdbd;
   width: 5px;

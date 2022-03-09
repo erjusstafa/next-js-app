@@ -9,16 +9,6 @@
   align-items: center;
   align-content: center;
 }
-.footer {
-  display: flex;
-  width: 100%;
-  flex: 1;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  bottom: 0;
-}
 
 @media (max-width: 600px) {
   .grid {

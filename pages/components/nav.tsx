@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { useAppSelector } from "redux/hooks";
 import { fetchUser, userAccesToken } from "utils/getUserDetail";
+import style from "../../styles/NavStyle.module.css";
 
 function Nav() {
   const { userAuth } = useAppSelector((state) => state.home);
@@ -20,7 +21,7 @@ function Nav() {
 
   useEffect(() => {
     handleUser;
-  }, []);
+  }, [user]);
 
   const handleClickRouter = () => {
     if (router.pathname !== "/") {
@@ -33,6 +34,8 @@ function Nav() {
     router.push("/login");
   };
 
+
+
   return (
     <>
       <Head>
@@ -40,7 +43,9 @@ function Nav() {
         <meta name="description" content="Genersted by create next app" />
         <link rel="icon" href="/logo.svg" />
       </Head>
-      <div className="nav--bar--wrapper container flex flex-row content-center justify-between sm:w-4/5 xl:w-4/5 2xl:w-6/12 w-screen mx-auto px-4  relative">
+      <div
+        className={`${style.navBarWrapper} container flex flex-row content-center justify-between sm:w-4/5 xl:w-4/5 2xl:w-6/12 w-screen mx-auto px-4  relative`}
+      >
         {userAuth && router.pathname !== "/" ? (
           <div className="flex flex-col content-center w-8 my-auto" onClick={handleClickRouter}>
             <ChevronLeftIcon className="text-gray-500" />
@@ -71,7 +76,7 @@ function Nav() {
               </p>
             </div>
           ) : (
-            <div className=" flex flex-col flex  items-center shadow-xl 2xl:shadow-transparent xl:shadow-transparent  pt-4 pb-4 w-32 h-32  rounded-full absolute -right-6 -top-3 bg-white md:bg-transparent  lg:bg-transparent 2xl:bg-transparent xl:bg-transparent z-0">
+            <div className=" flex flex-col flex  items-center shadow-xl md:shadow-transparent lg:shadow-transparen t2xl:shadow-transparent xl:shadow-transparent  pt-4 pb-4 w-32 h-32  rounded-full absolute -right-6 -top-3 bg-white md:bg-transparent  lg:bg-transparent 2xl:bg-transparent xl:bg-transparent z-0">
               <UserCircleIcon className="md:w-10 md:h-10 2xl:w-20 2xl:h-20  md:h-full text-[#6a1680] z-10 " />
               <p className="text-gray-500 w-1/2	 text-sm font-sans font-medium text-center uppercase">Kunden Bereich</p>
             </div>

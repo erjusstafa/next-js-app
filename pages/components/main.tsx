@@ -1,20 +1,38 @@
 import { IDescription } from "InterfaceTypes";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { authentication } from "redux/reducer/reducerSlice ";
+import { fetchUser, userAccesToken } from "utils/getUserDetail";
 import Login from "../login";
 
 const Main = ({ description }: IDescription) => {
   const dispatch = useAppDispatch();
   const router = useRouter();
+  const { userAuth } = useAppSelector((state) => state.home);
   const handleClickRouter = () => {
     router.push("components/nested/first");
     dispatch(authentication(true));
   };
 
+
+/*   const [user, setUser] = useState(fetchUser());
+
+  const handleUser = async () => {
+    const accessToken = userAccesToken();
+    if (!accessToken) return router.push("/login");
+    setUser(user);
+  };
+
+
+  useEffect(() => {
+    handleUser;
+  }, [user]); */
   return (
     <>
-     
+      {userAuth  ? (
+        <Login />
+      ) : (
         <div className="container px-4 flex flex-col justify-center m-40 mx-auto   sm:w-screen xl:w-6/12 2xl:w-6/12 	w-screen">
           <h3 className="text-[#7A7A7A] font-medium text-2xl text-start">{description}</h3>
           <span className="w-100">
@@ -28,7 +46,7 @@ const Main = ({ description }: IDescription) => {
             </a>
           </span>
         </div>
-    
+      )}
     </>
   );
 };
