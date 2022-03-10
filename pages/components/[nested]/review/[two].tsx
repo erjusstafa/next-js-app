@@ -14,10 +14,7 @@ const NestedTwo: NextPage = () => {
   const [idSelected, setIdSelected] = useState<number>(1);
   const [showDetails, setShowDetails] = useState<boolean>(true);
 
-  const { userAuth } = useAppSelector((state) => state.home);
-  const dispatch = useAppDispatch();
-  const router = useRouter();
-
+  
   const handleFillSelectOption = (id: number) => {
     setFillBackground("#812181");
     setRemoveColor(!removeColor);
@@ -27,12 +24,6 @@ const NestedTwo: NextPage = () => {
   const handleToggleOption = () => {
     setShowDetails(!showDetails);
   };
-
-  const handleClickHome = () => {
-    router.push("/");
-    dispatch(authentication(false));
-  };
-
   return (
     <div
       className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-7 mx-auto  overflow-hidden`}
@@ -77,7 +68,7 @@ const NestedTwo: NextPage = () => {
         {showDetails ? null : <p className=" text-black text-center">Hallo</p>}
       </div>
 
-      <span className="min-w-full flex flex-row justify-center mt-5" onClick={handleClickHome}>
+      <span className="min-w-full flex flex-row justify-center mt-5">
         <a className="text-center w-[300px] font-medium  leading-10  text-white rounded-lg mx-autorounded-lg bg-[#6a1680] shadow shadow-white-500/40 cursor-pointer">
           Weiter zu Terminmóglicheiten
         </a>
