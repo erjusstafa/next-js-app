@@ -20,10 +20,7 @@ const Main = ({ description }: IDescription) => {
           Postleitzahl eingeben
         </p>
       </span>
-      <span
-        className="min-w-full flex flex-row justify-center mt-5"
-        onClick={handleClickRouter}
-      >
+      <span className="min-w-full flex flex-row justify-center mt-5" onClick={handleClickRouter}>
         <a className="text-center w-64 cursor-pointer font-medium text-white rounded-lg p-4 mx-autorounded-lg bg-[#6a1680]">
           Agnebote ansehen
         </a>

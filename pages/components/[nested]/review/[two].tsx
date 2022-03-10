@@ -3,9 +3,6 @@ import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import { dataContainerTwo } from "config/data";
 import { IDataContainer } from "Interface";
 import { NextPage } from "next";
-import { useAppDispatch, useAppSelector } from "redux/hooks";
-import { useRouter } from "next/router";
-import { authentication } from "redux/reducer/reducerSlice ";
 import styles from "../../../../styles/Two.module.css";
 
 const NestedTwo: NextPage = () => {
@@ -14,7 +11,6 @@ const NestedTwo: NextPage = () => {
   const [idSelected, setIdSelected] = useState<number>(1);
   const [showDetails, setShowDetails] = useState<boolean>(true);
 
-  
   const handleFillSelectOption = (id: number) => {
     setFillBackground("#812181");
     setRemoveColor(!removeColor);
@@ -55,13 +51,13 @@ const NestedTwo: NextPage = () => {
         Wie lange schaten die die dauer der Reining ein?
       </h3>
       <div className="flex  transition ease-in-out delay-1750  flex-col justify-between p-2 my-1 rounded-lg mx-autorounded-lg bg-white shadow-md shadow-white-500/80 text-gray-500  hover:text-white ">
-        <span className="flex flex-row justify-between text-gray-500  ">
+        <span className="flex flex-row justify-between text-gray-500 cursor-pointer" onClick={handleToggleOption}>
           <p>Dauer auswahlen</p>
 
           {showDetails ? (
-            <ChevronDownIcon className="w-6 h-full text-inherit z-10  cursor-pointer" onClick={handleToggleOption} />
+            <ChevronDownIcon className="w-6 h-full text-inherit z-10" />
           ) : (
-            <ChevronUpIcon className="w-6 h-full text-inherit z-10  cursor-pointer" onClick={handleToggleOption} />
+            <ChevronUpIcon className="w-6 h-full text-inherit z-10" />
           )}
         </span>
 

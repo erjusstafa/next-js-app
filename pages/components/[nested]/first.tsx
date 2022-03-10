@@ -3,11 +3,13 @@ import { IDataContainer } from "Interface";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import { NextPage } from "next";
-import styles from "../../../styles/First.module.css"
+import styles from "../../../styles/First.module.css";
 
 const FirstNested: NextPage = () => {
   return (
-    <div className={`${styles.containerFirst}  container sm:w-4/5 xl:6/12 2xl:w-6/12 w-screen px-8 flex flex-col justify-center mx-auto mb-5`} >
+    <div
+      className={`${styles.containerFirst}  container sm:w-4/5 xl:6/12 2xl:w-6/12 w-screen px-8 flex flex-col justify-center mx-auto mb-5`}
+    >
       <h3 className="text-justify text-gray-600 font-medium text-2xl">Wir sind Fans von Spandau!</h3>
       <h3 className="text-justify text-gray-500 text-md font-medium leading-loose my-2 ">
         Tolle Nachrichten warten auf Sie :{" "}
@@ -28,7 +30,7 @@ const FirstNested: NextPage = () => {
         <p className="text-center text-[#6a1680] font-medium leading-10 mt-2">
           Prúfen ob Pflegezuscuss auf mich zutrifft
         </p>
-        <span className="absolute -top-5 -right-5 text-[15px] md:text-2xl  uppercase text-white font-semibold bg-[#6a1680] w-12  h-12 rounded-full  flex flex-row justify-center items-center">
+        <span className="absolute -top-5 -right-5  uppercase text-white font-semibold bg-[#6a1680] w-12  h-12 rounded-full  flex flex-row justify-center items-center">
           neu
         </span>
       </div>

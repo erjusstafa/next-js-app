@@ -1,13 +1,11 @@
 import Image from "next/image";
-import logoFooter from "/logoFooter.svg";
 import { Ifooter } from "Interface";
-import  style from "../../styles/FooterStyle.module.css"
+import style from "../../styles/FooterStyle.module.css";
+
 function Footer({ title }: Ifooter) {
   return (
     <div className={`${style.footerContainer}  p-0 m-0 min-w-full	 flex flex-col items-center  bg-[#6a1680] relative`}>
       <Image src="/logoFooter.svg" height="60" width="60" alt="logo" />{" "}
-
-
       <p className="text-white text-sm font-sans font-normal text-center capitalize mt-2">{title}</p>
     </div>
   );
