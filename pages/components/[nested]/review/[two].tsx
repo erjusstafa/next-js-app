@@ -35,9 +35,9 @@ const NestedTwo: NextPage = () => {
 
   return (
     <div
-      className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-5 mx-auto  overflow-hidden`}
+      className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-7 mx-auto  overflow-hidden`}
     >
-      <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2 ">
+      <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2">
         Wie oft wúnchen Sie eine Reining?
       </h3>
       {dataContainerTwo.map((item: IDataContainer) => (

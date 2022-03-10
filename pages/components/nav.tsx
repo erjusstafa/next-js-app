@@ -23,7 +23,7 @@ function Nav() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <div
-        className={`${style.navBarWrapper} container flex flex-row content-center justify-between sm:w-4/5 xl:w-4/5 2xl:w-6/12 w-screen mx-auto px-4  relative`}
+        className={`${style.navBarWrapper} container flex flex-row content-center justify-between sm:w-4/5 xl:w-4/5 2xl:w-6/12 w-screen mx-auto px-7  relative`}
       >
         {userAuth && router.pathname !== "/" ? (
           <div className="flex flex-col content-center w-8 my-auto cursor-pointer" onClick={handleClickRouter}>

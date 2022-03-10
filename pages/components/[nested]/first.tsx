@@ -7,7 +7,7 @@ import styles from "../../../styles/First.module.css"
 
 const FirstNested: NextPage = () => {
   return (
-    <div className={`${styles.containerFirst}  container sm:w-4/5 xl:6/12 2xl:w-6/12 w-screen px-5 flex flex-col justify-center mx-auto mb-5`} >
+    <div className={`${styles.containerFirst}  container sm:w-4/5 xl:6/12 2xl:w-6/12 w-screen px-8 flex flex-col justify-center mx-auto mb-5`} >
       <h3 className="text-justify text-gray-600 font-medium text-2xl">Wir sind Fans von Spandau!</h3>
       <h3 className="text-justify text-gray-500 text-md font-medium leading-loose my-2 ">
         Tolle Nachrichten warten auf Sie :{" "}
