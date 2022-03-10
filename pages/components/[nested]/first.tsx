@@ -28,7 +28,7 @@ const FirstNested: NextPage = () => {
         <p className="text-center text-[#6a1680] font-medium leading-10 mt-2">
           Prúfen ob Pflegezuscuss auf mich zutrifft
         </p>
-        <span className="absolute -top-5 -right-5 uppercase text-white bg-[#6a1680] w-12  h-12 rounded-full  flex flex-row justify-center items-center">
+        <span className="absolute -top-5 -right-5 text-[15px] md:text-2xl  uppercase text-white font-semibold bg-[#6a1680] w-12  h-12 rounded-full  flex flex-row justify-center items-center">
           neu
         </span>
       </div>
