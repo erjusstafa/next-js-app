@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useEffect } from "react";
 
-const Redirect = ({ to }: any) => {
+const RedirectPage = ({ to }: any) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -11,4 +11,4 @@ const Redirect = ({ to }: any) => {
   return null;
 };
 
-export default Redirect;
+export default RedirectPage;

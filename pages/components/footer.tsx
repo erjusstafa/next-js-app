@@ -1,6 +1,6 @@
 import Image from "next/image";
 import logoFooter from "/logoFooter.svg";
-import { Ifooter } from "InterfaceTypes";
+import { Ifooter } from "Interface";
 import  style from "../../styles/FooterStyle.module.css"
 function Footer({ title }: Ifooter) {
   return (

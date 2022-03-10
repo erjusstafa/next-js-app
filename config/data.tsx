@@ -1,4 +1,4 @@
-import { IDataContainer } from "InterfaceTypes";
+import { IDataContainer } from "Interface";
 
 export  const dataContainerOner : IDataContainer[] = [
   {

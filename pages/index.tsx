@@ -4,14 +4,16 @@ import Main from "@/components/main";
 import Head from "next/head";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
-import { userAccesToken } from "utils/getUserDetail";
+import { userAccesToken } from "config/getUserDetail";
+import { useAppSelector } from "redux/hooks";
 
 const Home: NextPage = () => {
   const router = useRouter();
   const accessToken = userAccesToken();
+  const { userAuth } = useAppSelector((state) => state.home);
 
   const handleRedirectLogin = () => {
-    if (!accessToken) return router.push("/login");
+    if (!accessToken && userAuth) return router.push("/login");
   };
 
   useEffect(() => {

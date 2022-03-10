@@ -1,15 +1,18 @@
-import { IDescription } from "InterfaceTypes";
+import { IDescription } from "Interface";
 import { useRouter } from "next/router";
-import { useAppDispatch } from "redux/hooks";
+import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { authentication } from "redux/reducer/reducerSlice ";
 
 const Main = ({ description}: IDescription ) => {
+  const { userAuth } = useAppSelector((state) => state.home);
+
   const dispatch = useAppDispatch();
   const router = useRouter();
   const handleClickRouter = () => {
     router.push("components/nested/first");
     dispatch(authentication(true));
   };
+
   return (
     <div className="container px-4 flex flex-col justify-center m-40 mx-auto   sm:w-screen xl:w-6/12 2xl:w-6/12 	w-screen">
       <h3 className="text-[#7A7A7A] font-medium text-2xl text-start md:text-center md:text-center xl:text-center 2xl:text-center">
