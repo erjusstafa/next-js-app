@@ -1,6 +1,6 @@
 import { IDescription } from "InterfaceTypes";
 import { useRouter } from "next/router";
-import { useAppDispatch, useAppSelector } from "redux/hooks";
+import { useAppDispatch } from "redux/hooks";
 import { authentication } from "redux/reducer/reducerSlice ";
 
 const Main = ({ description }: IDescription) => {

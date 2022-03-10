@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
 import { dataContainerTwo } from "config";
 import { IDataContainer } from "InterfaceTypes";
@@ -6,7 +6,8 @@ import { NextPage } from "next";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { useRouter } from "next/router";
 import { authentication } from "redux/reducer/reducerSlice ";
-import styles from "../../../../styles/Two.module.css"
+import styles from "../../../../styles/Two.module.css";
+
 const NestedTwo: NextPage = () => {
   const [fillBackground, setFillBackground] = useState<string>("transparent");
   const [removeColor, setRemoveColor] = useState<boolean>(false);
@@ -27,14 +28,15 @@ const NestedTwo: NextPage = () => {
     setShowDetails(!showDetails);
   };
 
-
   const handleClickHome = () => {
     router.push("/");
     dispatch(authentication(false));
   };
 
   return (
-    <div className= {`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-5 mx-auto  overflow-hidden`}>
+    <div
+      className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-5 mx-auto  overflow-hidden`}
+    >
       <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2 ">
         Wie oft wúnchen Sie eine Reining?
       </h3>
