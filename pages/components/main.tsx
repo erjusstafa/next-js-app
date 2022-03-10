@@ -1,9 +1,9 @@
 import { IDescription } from "InterfaceTypes";
 import { useRouter } from "next/router";
-import { useAppDispatch, useAppSelector } from "redux/hooks";
+import { useAppDispatch } from "redux/hooks";
 import { authentication } from "redux/reducer/reducerSlice ";
 
-const Main = ({ description }: IDescription) => {
+const Main = ({ description}: IDescription ) => {
   const dispatch = useAppDispatch();
   const router = useRouter();
   const handleClickRouter = () => {
@@ -12,7 +12,7 @@ const Main = ({ description }: IDescription) => {
   };
   return (
     <div className="container px-4 flex flex-col justify-center m-40 mx-auto   sm:w-screen xl:w-6/12 2xl:w-6/12 	w-screen">
-      <h3 className="text-[#7A7A7A] font-medium text-2xl text-start">
+      <h3 className="text-[#7A7A7A] font-medium text-2xl text-start md:text-center md:text-center xl:text-center 2xl:text-center">
         {description}
       </h3>
       <span className="w-100">

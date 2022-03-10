@@ -1,21 +1,25 @@
 import { NextPage } from "next";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { async } from "@firebase/util";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import styles from "../styles/LoginStyle.module.css";
-import { firebaseApp } from "../firebase/initFirebase";
+import { useAppSelector } from "redux/hooks";
+import { firebaseApp } from "config/firebase";
 
 const Login: NextPage = () => {
   const firebseAuth = getAuth(firebaseApp);
   const provider = new GoogleAuthProvider();
   const router = useRouter();
+const {userAuth } = useAppSelector((state) =>state.home)
+const [isLoggin, setIsLoggin] = useState<boolean>(userAuth)
+
 
   const signIn = async () => {
     const { user } = await signInWithPopup(firebseAuth, provider);
     const { refreshToken, providerData } = user;
-
+    setIsLoggin(isLoggin)
     localStorage.setItem("user", JSON.stringify(providerData));
     localStorage.setItem("accessToken", JSON.stringify(refreshToken));
     router.push("/");

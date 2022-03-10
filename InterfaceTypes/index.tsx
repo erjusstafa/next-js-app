@@ -1,11 +1,19 @@
 export interface Ifooter {
-    title  : string
+  title: string;
 }
-export interface IDescription{
-    description : string
+export interface IDescription {
+  description: string;
 }
 export interface IDataContainer {
-    id : number;
-    boxParagraph : string
+  id: number;
+  boxParagraph: string;
 }
 
+export interface IUser {
+  displayName: string;
+  email: string;
+  phoneNumber: null | any;
+  photoURL: string;
+  providerId: string;
+  uid: string;
+}
