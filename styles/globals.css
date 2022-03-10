@@ -2,13 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-primary-accent: #812181;
+  --body-color: #f1f1f1;
+  --scrollbar-color: #c0bdbd;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
-  background-color: #f1f1f1;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: var(--body-color);
   overflow-x: hidden;
   box-sizing: border-box;
 }
@@ -23,16 +29,16 @@ a {
 }
 
 ::-webkit-scrollbar {
-  background-color: #c0bdbd;
+  background-color: var(--scrollbar-color);
   width: 5px;
 }
 
 .selceted-option.active {
-  background-color: #812181;
+  background-color: var(--color-primary-accent);
   transition: all 0.5s ease-in-out;
 }
 
 .selceted-option-tab.active {
-  border: 1px solid #812181;
+  border: 1px solid var(--color-primary-accent);
   transition: all 0.5s ease-in-out;
 }

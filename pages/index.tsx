@@ -6,19 +6,24 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { userAccesToken } from "config/getUserDetail";
 import { useAppSelector } from "redux/hooks";
+import { EmptyObject } from "@reduxjs/toolkit";
+import { UserState } from "redux/reducer/reducerSlice ";
+import { PersistPartial } from "redux-persist/lib/persistReducer";
 
 const Home: NextPage = () => {
   const router = useRouter();
   const accessToken = userAccesToken();
-  const { userAuth } = useAppSelector((state) => state.home);
-
-  const handleRedirectLogin = () => {
-    if (!accessToken && userAuth) return router.push("/login");
-  };
+  const { userAuth } = useAppSelector(
+    (
+      state: EmptyObject & {
+        home: UserState;
+      } & PersistPartial
+    ) => state.home
+  );
 
   useEffect(() => {
-    handleRedirectLogin();
-  }, []);
+    if (!userAuth || !accessToken) router.push("/login");
+  });
 
   return (
     <>
