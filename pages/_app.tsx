@@ -7,7 +7,6 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
-import { SessionProvider } from "next-auth/react";
 
 const persistor = persistStore(store);
 
@@ -16,11 +15,9 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }: AppProps) {
   return (
     <Provider store={store}>
       <PersistGate persistor={persistor}>
-        <SessionProvider session={session}>
           <Nav />
           <Component {...pageProps} />
           <Footer title="binschonda Hauptstadt-Pflegedienst GmbH" />
-        </SessionProvider>
       </PersistGate>
     </Provider>
   );

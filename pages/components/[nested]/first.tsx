@@ -1,5 +1,5 @@
-import { dataContainerOner } from "config";
-import { IDataContainer } from "InterfaceTypes";
+import { dataContainerOner } from "config/data";
+import { IDataContainer } from "Interface";
 import Link from "next/link";
 import { ChevronRightIcon } from "@heroicons/react/outline";
 import { NextPage } from "next";

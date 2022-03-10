@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { ChevronDownIcon, ChevronUpIcon } from "@heroicons/react/outline";
-import { dataContainerTwo } from "config";
-import { IDataContainer } from "InterfaceTypes";
+import { dataContainerTwo } from "config/data";
+import { IDataContainer } from "Interface";
 import { NextPage } from "next";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { useRouter } from "next/router";

@@ -1,4 +1,4 @@
-import { IDescription } from "InterfaceTypes";
+import { IDescription } from "Interface";
 import { useRouter } from "next/router";
 import { useAppDispatch } from "redux/hooks";
 import { authentication } from "redux/reducer/reducerSlice ";
