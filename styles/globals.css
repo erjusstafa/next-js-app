@@ -5,7 +5,7 @@
 :root {
   --color-primary-accent: #812181;
   --body-color: #f1f1f1;
- /*  --scrollbar-color: #c0bdbd; */
+  --scrollbar-color: #c0bdbd;
 }
 
 html,
