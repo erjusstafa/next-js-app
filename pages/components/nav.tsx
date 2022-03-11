@@ -52,7 +52,7 @@ function Nav() {
         <link rel="icon" href="/logo.svg" />
       </Head>
       <div
-        className={`${styles.navBarWrapper} container flex flex-row content-center justify-between sm:w-4/5 xl:w-4/5 2xl:w-6/12 w-screen mx-auto px-4  relative`}
+        className={`${styles.navBarWrapper} container flex flex-row content-center justify-between sm:w-4/5 xl:w-4/5 2xl:w-6/12 w-screen mx-auto px-6  relative`}
       >
         {userAuth && router.pathname !== "/" ? (
           <div
@@ -69,8 +69,8 @@ function Nav() {
         <div
           className={
             userAuth && router.pathname === "/"
-              ? "block mx-auto relative -left-8 "
-              : "block mx-auto relative -left-8"
+              ? "block mx-auto relative -left-2 "
+              : "block mx-auto relative -left-2"
           }
         >
           <Image src="/logo.svg" height="144" width="204" alt="logo" />

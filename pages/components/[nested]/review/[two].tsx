@@ -26,7 +26,7 @@ const NestedTwo: NextPage = () => {
 
   return (
     <div
-      className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-5 mx-auto  overflow-hidden`}
+      className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-7 mx-auto  overflow-hidden`}
     >
       <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2">
         Wie oft wúnchen Sie eine Reining?
@@ -71,8 +71,8 @@ const NestedTwo: NextPage = () => {
         {showDetails ? null : <p className=" text-black text-center">Hallo</p>}
       </div>
 
-      <span className="min-w-full flex flex-row justify-center mt-5">
-        <a className="text-center w-[300px] font-medium  leading-10  text-white rounded-lg mx-autorounded-lg bg-[#6a1680] shadow shadow-white-500/40 cursor-pointer">
+      <span className="min-w-full flex flex-row justify-center mt-5  ">
+        <a className="text-center w-[300px] font-medium  leading-10 mt-5 text-white rounded-lg mx-autorounded-lg bg-[#6a1680] shadow shadow-white-500/40 cursor-pointer">
           Weiter zu Terminmóglicheiten
         </a>
       </span>

@@ -8,7 +8,7 @@ import styles from "../../../styles/First.module.css";
 const FirstNested: NextPage = () => {
   return (
     <div
-      className={`${styles.containerFirst}  container sm:w-4/5 xl:6/12 2xl:w-6/12 w-screen px-5 flex flex-col justify-center mx-auto mb-5`}
+      className={`${styles.containerFirst}  container sm:w-4/5 xl:6/12 2xl:w-6/12 w-screen px-7 flex flex-col justify-center mx-auto mb-5`}
     >
       <h3 className="text-justify text-gray-600 font-medium text-2xl">
         Wir sind Fans von Spandau!
@@ -16,7 +16,7 @@ const FirstNested: NextPage = () => {
       <h3 className="text-justify text-gray-500 text-md font-medium leading-loose my-2 ">
         Tolle Nachrichten warten auf Sie :{" "}
       </h3>
-      <div className="relative w-50 mx-auto rounded-lg mx-autorounded-lg bg-white shadow-lg shadow-white-500/80 p-5">
+      <div className="relative w-50 rounded-lg mx-autorounded-lg bg-white shadow-lg shadow-white-500/80 p-5 mx-1">
         <h2 className="title text-black-800 font-black text-md">
           Willkommenspaket im Dezember
         </h2>
@@ -33,7 +33,7 @@ const FirstNested: NextPage = () => {
             </a>
           </Link>
         </span>
-        <p className="text-center text-[#6a1680] font-medium leading-10 mt-2">
+        <p className="text-center text-[#6a1680] font-medium leading-10 mt-2 text-sm">
           Prúfen ob Pflegezuscuss auf mich zutrifft
         </p>
         <span className="absolute -top-5 -right-5 uppercase text-white bg-[#6a1680] w-12  h-12 rounded-full  flex flex-row justify-center items-center">
