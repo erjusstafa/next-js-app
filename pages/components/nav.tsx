@@ -56,7 +56,7 @@ function Nav() {
       >
         {userAuth && router.pathname !== "/" ? (
           <div
-            className="flex flex-col content-center w-8 my-auto cursor-pointer"
+            className="flex flex-col content-center w-8 my-auto cursor-pointer "
             onClick={handleClickRouter}
           >
             <ChevronLeftIcon className="text-gray-500" />

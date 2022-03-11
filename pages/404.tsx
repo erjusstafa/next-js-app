@@ -30,7 +30,7 @@ const PageNotFound = () => {
   return (
     <div className={`${styles.NotFoundContent} content w-full`}>
       <div className="flex cursor-pointer justify-center mx-auto  items-center w-64 p-5 bg-white rounded-full text-black text-center relative top-60 shadow-lg">
-        <p className="mx-2 font-semibold text-slate-900 "> Page Not | Found</p>{" "}
+        <p className="mx-2 font-semibold text-slate-900 "> Page Not | Found </p>{" "}
       </div>
     </div>
   );

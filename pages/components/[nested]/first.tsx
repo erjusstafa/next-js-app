@@ -17,7 +17,7 @@ const FirstNested: NextPage = () => {
         Tolle Nachrichten warten auf Sie :{" "}
       </h3>
       <div className="relative w-50 mx-auto rounded-lg mx-autorounded-lg bg-white shadow-lg shadow-white-500/80 p-5">
-        <h2 className="title text-black-800 font-black text-md	">
+        <h2 className="title text-black-800 font-black text-md">
           Willkommenspaket im Dezember
         </h2>
         <p className=" text-gray-600 my-3 font-medium">-Hasreinigung</p>

@@ -10,7 +10,7 @@ const NotFound = () => {
     }, 2000);
   }, []);
 
-  return <div>NotFound</div>;
+  return <div>NotFound </div>;
 };
 
 export default NotFound;

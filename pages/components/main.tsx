@@ -26,7 +26,7 @@ const Main = ({ description }: IDescription) => {
         {description}
       </h3>
       <span className="w-100">
-        <p className="text-center font-medium	 text-[#7A7A7A] rounded-lg p-4 mt-5 mx-autorounded-lg bg-white shadow-xl shadow-white-500/40	">
+        <p className="text-center font-medium	 text-[#7A7A7A] rounded-lg p-4 mt-5 mx-autorounded-lg bg-white shadow-xl shadow-white-500/40">
           Postleitzahl eingeben
         </p>
       </span>

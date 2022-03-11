@@ -13,7 +13,7 @@ const NestedTwo: NextPage = () => {
   const [removeColor, setRemoveColor] = useState<boolean>(false);
   const [idSelected, setIdSelected] = useState<number>(1);
   const [showDetails, setShowDetails] = useState<boolean>(true);
-  
+
   const handleFillSelectOption = (id: number) => {
     setFillBackground("#812181");
     setRemoveColor(!removeColor);
@@ -28,7 +28,7 @@ const NestedTwo: NextPage = () => {
     <div
       className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-5 mx-auto  overflow-hidden`}
     >
-      <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2 ">
+      <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2">
         Wie oft wúnchen Sie eine Reining?
       </h3>
       {dataContainerTwo.map((item: IDataContainer) => (
@@ -55,7 +55,10 @@ const NestedTwo: NextPage = () => {
         Wie lange schaten die die dauer der Reining ein?
       </h3>
       <div className="flex  transition ease-in-out delay-1750  flex-col justify-between p-2 my-1 rounded-lg mx-autorounded-lg bg-white shadow-md shadow-white-500/80 text-gray-500  hover:text-white ">
-        <span onClick={handleToggleOption} className="flex flex-row justify-between text-gray-500 cursor-pointer ">
+        <span
+          onClick={handleToggleOption}
+          className="flex flex-row justify-between text-gray-500 cursor-pointer "
+        >
           <p>Dauer auswahlen</p>
 
           {showDetails ? (

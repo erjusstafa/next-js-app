@@ -29,7 +29,7 @@ const Home: NextPage = () => {
     <>
       <div className={styles.container}>
         <Head>
-          <title>Erjus Stafa</title>
+          <title>Erjus Stafa </title>
           <meta name="description" content="Genersted by create next app" />
           <link rel="icon" href="/logo.svg" />
         </Head>

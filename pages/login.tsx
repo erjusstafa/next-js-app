@@ -7,14 +7,22 @@ import Image from "next/image";
 import styles from "../styles/LoginStyle.module.css";
 import { useAppDispatch, useAppSelector } from "redux/hooks";
 import { firebaseApp } from "config/firebase";
-import { authentication } from "redux/reducer/reducerSlice ";
+import { authentication, UserState } from "redux/reducer/reducerSlice ";
+import { EmptyObject } from "@reduxjs/toolkit";
+import { PersistPartial } from "redux-persist/lib/persistReducer";
 
 const Login: NextPage = () => {
   const firebseAuth = getAuth(firebaseApp);
   const provider = new GoogleAuthProvider();
   const router = useRouter();
   const dispatch = useAppDispatch();
-  const { userAuth } = useAppSelector((state) => state.home);
+  const { userAuth } = useAppSelector(
+    (
+      state: EmptyObject & {
+        home: UserState;
+      } & PersistPartial
+    ) => state.home
+  );
   const [isLoggin, setIsLoggin] = useState<boolean>(userAuth);
 
   const signIn = async () => {
