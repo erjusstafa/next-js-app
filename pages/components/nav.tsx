@@ -41,7 +41,7 @@ function Nav() {
           className={
             userAuth && router.pathname === "/"
               ? "block mx-auto relative -left-10 "
-              : "mx-auto relative -left-5"
+              : "mx-auto relative -left-10"
           }
         >
           <Image src="/logo.svg" height="144" width="204" alt="logo" />
