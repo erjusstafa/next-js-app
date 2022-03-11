@@ -69,8 +69,8 @@ function Nav() {
         <div
           className={
             userAuth && router.pathname === "/"
-              ? "block mx-auto relative -left-2 "
-              : "block mx-auto relative -left-2"
+              ? "block mx-auto relative -left-4 "
+              : "block mx-auto relative -left-8"
           }
         >
           <Image src="/logo.svg" height="144" width="204" alt="logo" />
