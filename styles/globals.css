@@ -6,8 +6,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
-    Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   background-color: #f1f1f1;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -35,4 +35,8 @@ a {
 .selceted-option-tab.active {
   border: 1px solid #812181;
   transition: all 0.5s ease-in-out;
+}
+
+.paragraph-active.active {
+  font-weight: 600;
 }
