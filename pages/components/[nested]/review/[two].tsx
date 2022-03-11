@@ -22,7 +22,7 @@ const NestedTwo: NextPage = () => {
   };
   return (
     <div
-      className={`${styles.containerTwo} container sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-7 mx-auto  overflow-hidden`}
+      className={`${styles.containerTwo} container  sm:w-4/5 xl:6/12 2xl:w-6/12	w-screen px-7 mx-auto  overflow-hidden`}
     >
       <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2">
         Wie oft wúnchen Sie eine Reining?
@@ -51,7 +51,10 @@ const NestedTwo: NextPage = () => {
         Wie lange schaten die die dauer der Reining ein?
       </h3>
       <div className="flex  transition ease-in-out delay-1750  flex-col justify-between p-2 my-1 rounded-lg mx-autorounded-lg bg-white shadow-md shadow-white-500/80 text-gray-500  hover:text-white ">
-        <span className="flex flex-row justify-between text-gray-500 cursor-pointer" onClick={handleToggleOption}>
+        <span
+          className="flex flex-row justify-between text-gray-500 cursor-pointer"
+          onClick={handleToggleOption}
+        >
           <p>Dauer auswahlen</p>
 
           {showDetails ? (
