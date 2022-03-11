@@ -43,12 +43,19 @@ const NestedTwo: NextPage = () => {
           <span
             className={
               "selceted-option border border-[gray] w-[20px] h-[20px] rounded-full " +
-              (idSelected === item.id ? " active" : "")
+              (idSelected === item.id ? " active " : "")
             }
           >
             {null}
           </span>
-          <p className="text-center absolute left-14">{item.boxParagraph}</p>
+          <p
+            className={
+              "paragraph-active text-center absolute left-14" +
+              (idSelected === item.id ? " active " : "")
+            }
+          >
+            {item.boxParagraph}
+          </p>
         </div>
       ))}
       <h3 className="text-justify text-gray-500 text-sm font-medium leading-loose my-2 ">
